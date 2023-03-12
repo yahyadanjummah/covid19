@@ -1,0 +1,373 @@
+# the first page in detection codes
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid-19 Detection</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" type="image/png" href="image/covid-19.png">
+    <!-- font awesome icons file CDN link -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="./image/covid-19.png" alt="logo">
+                    <span>Covid-19</span>
+                </div>
+                <div class="links">
+                    <a href="#" class="nav-btn active">Overview</a>
+                    <a href="#" class="nav-btn">Contagion</a>
+                    <a href="#" class="nav-btn">Symptoms</a>
+                    <a href="#" class="nav-btn">Prevention</a>
+                    <a href="#" class="nav-btn">Contact</a>
+                </div>
+            </div>
+
+            <div class="main">
+                <div class="content">
+                    <span>COVID-19 Alert</span>
+                    <p class="heading">Getting Detection.</p>
+                    <!-- <p class="para">The first step to achieve this is to identify those patients using detection kits. Never before is a virus detection system so critical to contain a viral outbreak as dangerous as COVID-19</p> -->
+                    <!-- <button class="pill" type="huge"><a href="azim.html">Covid-19 Detection</a></button> -->
+                    <button class="pill" type="huge"><a href="index.html">Test Detection</a></button>  
+                    <!-- <button class="pill" type="button">Covid-19 Detection</button>   -->
+                    <!-- <input type="button" -->
+                </div>
+                <div class="image">
+                    <img src="./image/second.jpg" alt="main_img">
+                </div>
+            </div>
+            <div class="social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </section>
+    <script>
+        const nav_btns = document.querySelectorAll('.nav-btn');
+        nav_btns.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                nav_btns.forEach((button) => button.classList.remove('active'));
+                btn.classList.add('active');
+            })
+        })
+    </script>
+</body>
+</html>
+
+#css1
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+section{
+    width: 100%;
+    height: 100vh;
+    background-color: #f0f5ff;
+    display: flex;
+    justify-content: flex-end;
+}
+.container{
+    width: 90%;
+    height: 100%;
+}
+.container .navbar{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.navbar .logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 170px;
+}
+.navbar .logo img{
+    width: 60px;
+    height: 60px;
+}
+.logo span{
+    font-size: 19px;
+    color: #035755;
+    font-weight: bold;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+.navbar .links{
+    margin-right: 100px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+.links a:not(:last-of-type){
+    margin-right: 40px;
+    text-decoration: none;
+    color: #035755;
+    font-size: 18px;
+    position: relative;
+}
+.links a:not(:last-of-type).active::before{
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: #2956ff;
+    position: absolute;
+    border-radius: 50%;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.links a:not(:last-of-type).active{
+    color: #2956ff;
+}
+.links a:last-of-type{
+    border: 2px solid #2956ff;
+    border-radius: 47px;
+    padding: 16px 45px;
+    text-decoration: none;
+    color: #2956ff;
+    font-size: 14px;
+}
+.links a:last-of-type:hover{
+    background-color: #2956ff;
+    border: 2px solid #035755;
+    color: #fff;
+}
+.container .main{
+    display: flex;
+}
+.main .content{
+    width: 750px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.content span{
+    color: #2956ff;
+    font-size: 22px;
+}
+.content .heading{
+    color: #035755;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.content .para{
+    font-size: 18px;
+    color: #4B4F51;
+    font-weight: normal;
+    font-style: normal;
+    margin-bottom: 40px;
+}
+
+
+.content button{
+    width: 200px;
+    height: 60px;
+    font-size: 18px;
+    background-color: #4059b6;
+    border: none;
+    outline: none;
+    border-radius: 65px;
+    box-shadow: 0 8px 87px rgba(15, 11, 104, 0.2);
+    color: rgb(32, 85, 169);
+    cursor: pointer;
+}
+
+.content button:hover{
+    color: #2956ff;
+    background-color: rgb(17, 66, 164);
+}
+.main .image{
+    width: 1085px;
+    height: 450px;
+}
+.image img{
+    width: 90%;
+    height: 100%;
+}
+.container .social{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social a{
+    margin-right: 35px;
+    color: #035755;
+}
+
+a i{
+    font-size: 25px;
+}
+a i.fa-facebook:hover{
+    color: #426782;
+}
+a i.fa-instagram:hover{
+    color: #E1306C;
+}
+a i.fa-twitter:hover{
+    color: #1DA1F2;
+}
+a i.fa-youtube:hover{
+    color: #FF0000;
+} 
+
+#the second page in detection codes
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Covid-19</title>
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> 
+    <link href="css/main.css" rel="stylesheet">   
+    <link rel="shortcut icon" type="image/png" href="https://i.postimg.cc/wT2WgwrF/covid-19.png">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="https://i.postimg.cc/wT2WgwrF/covid-19.png" alt="logo">
+                <span>Covid-19</span>
+            </div>
+        </div>
+        
+        <div class="container">
+        <div id="content" style="margin-top:5em">
+            <h2>Image Classifier</h2>
+
+            <div>
+                <form id="upload-file" method="post" enctype="multipart/form-data">
+                    <label for="imageUpload" class="upload-label">
+                        Choose...
+                    </label>
+                    <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+                </form>
+            
+                <div class="image-section" style="display:none;">
+                    <div class="img-preview">
+                        <div id="imagePreview">
+                        </div>
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-primary btn-lg " id="btn-predict">Predict!</button>
+                    </div>
+                </div>
+            
+                <div class="loader" style="display:none;"></div>
+            
+                <h3 id="result">
+                    <span> </span>
+                </h3>
+            
+            </div>
+        </div>
+    </div>
+</body>
+ <footer>
+    <script src="js/main.js" type="text/javascript"></script>    
+</footer>
+</html>
+
+#css2
+
+body {
+    background-image: url("/second.jpg");
+    background-repeat: no-repeat;
+    background-size: 900px 900px;
+    background-position: right;
+    
+   }
+.navbar .logo img{
+    width: 50px;
+    height: 50px;
+}
+.logo span{
+    font-size: 19px;
+    color: #035755;
+    font-weight: bold;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+
+.main .image{
+    width: 1085px;
+    height: 450px;
+}
+.image img{
+    width: 90%;
+    height: 100%;
+}
+
+.img-preview {
+    width: 256px;
+    height: 256px;
+    position: relative;
+    border: 5px solid #F8F8F8;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    margin-top: 1em;
+    margin-bottom: 1em;    
+}
+
+.img-preview>div {
+    width: 100%;
+    height: 100%;
+    background-size: 256px 256px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+
+.upload-label{
+    display: inline-block;
+    padding: 12px 30px;
+    background: #4059b6;
+    color: #fff;
+    font-size: 18px;
+    transition: all .4s;
+    border-radius: 65px;
+    cursor: pointer;
+}
+
+.upload-label:hover{
+    background: #4059b6;
+    color: #4059b6;
+}
+
+.loader {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #4059b6; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
